@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Owlcarousel")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar--blue2 bg--clr" id="MainNav" style="font-size:1.8rem;">
+        <a class="navbar-brand d-block d-lg-none" href="/">
+            <img src="/Content/img/Logo YuriVisa.png" width="100" height="auto" class="d-inline-block align-top" alt="">       
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#MainNavContainer" aria-controls="MainNavContainer" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="MainNavContainer">
+            <ul class="navbar-nav  mt-2 mt-lg-0 align-items-center mx-auto navbar--pink1">
+                <li class="nav-item animation-element border__bottom mx-5">
+                    <a class="nav-link" href="/Home/About">About</a>
+                </li>
+                <li class="nav-item nav-item animation-element border__bottom mx-5 ">
+                    <a class="nav-link" href="/Home/Services">Services</a>
+                </li>
+                <li class="nav-item nav-item animation-element border__bottom d-none d-lg-inline-block">
+                    <a class="nav-link" href="/">
+                        <div><img class="w-75 h-auto mx-auto d-block" src="/Content/img/Logo YuriVisa.png" /></div>
+                    </a>
+                </li>
+                <li class="nav-item nav-item animation-element border__bottom mx-5 ">
+                    <a class="nav-link" href="/Home/News">News</a>
+                </li>
+                <li class="nav-item nav-item animation-element border__bottom mx-5">
+                    <a class="nav-link" href="/Home/PaymentInformation">Payment</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="w-100 bg--linear position-relative">
+        <div class="position-fixed w-100 text-center bg-light" style="bottom:0;left:0;z-index:100;">Hotline +84 352 165 585</div>
+        @RenderBody()
+
+
+        <footer class="py-5">
+            <div class="row col-9 mx-auto">
+                <div class="row col-9">
+                    <div class="col-4 box">
+                        <div class="box-header">
+                            Services<br />
+                        </div>
+                        <div class="box-body">
+                            Visa for Vietnamese<br />
+                            Vietnam Visa for Foreigner<br />
+                            Finance Proof<br />
+                            Consular Legalization<br />
+                        </div>
+                    </div>
+                    <div class="col-4 box">
+                        <div class="box-header">
+                            Information<br />
+                        </div>
+                        <div class="box-body">
+                            About<br />
+                            Privacy Policy<br />
+                            Terms & Conditions<br />
+                        </div>
+                    </div>
+                    <div class="col-4 box">
+                        <div class="box-header">
+                            Contact Us<br />
+                        </div>
+                        <div class="box-body">
+
+                            +84 352 165 585<br />
+                            info@yurivisa.com<br />
+                            Zalo:<br />
+                            Wechat:<br />
+                        </div>
+                    </div>
+
+
+                    <form class="col-12 mt-3 form-style1" id="FormFooter">
+                        <div class="form-group row mb-0 align-items-center">
+                            <label for="inputEmail" class="col-4 col-form-label">Subscribe to our newsletter</label>
+                            <div class="col-sm-4">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email Address">
+                            </div>
+                            <button type="submit" class="btn btn-primary  col-2">Submit</button>
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+                <div class="col-3  px-0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.0074602362374!2d106.62713582918249!3d10.732181817168799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ffea7cbfc59%3A0x1b9b482055055371!2sNgoc+Quyen+Management+Consulting+Company+Limited!5e0!3m2!1svi!2s!4v1545104897769" width="100%" height="100%" frameborder="0" style="border:1px solid black;" allowfullscreen></iframe>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/Site")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

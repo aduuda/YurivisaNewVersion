@@ -14,8 +14,8 @@ namespace YuriVisaNewVersion
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapRoute(
             name: "NewView",
-            url: "{controller}/{action}/{Metatitle}",
-            defaults: new { controller = "Home", action = "NewView" },
+            url: "{controller}/{action}/{Metatitle}/{id}",
+            defaults: new { controller = "Home", action = "NewView"},
             namespaces: new[] { "YuriVisaNewVersion.Controllers" }
         );
 

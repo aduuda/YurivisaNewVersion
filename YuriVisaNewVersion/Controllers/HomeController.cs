@@ -37,13 +37,14 @@ namespace YuriVisaNewVersion.Controllers
         {
             return View();
         }
-        public ActionResult NewView(string Metatitle)
+        public ActionResult NewView(string Metatitle,int id)
         {
             if (Metatitle == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            YuriContent yuriContent = db.YuriContents.Where(x=>x.MetaTitle==Metatitle).FirstOrDefault();            
+            //YuriContent yuriContent = db.YuriContents.Where(x=>x.MetaTitle==Metatitle).FirstOrDefault();   
+            YuriContent yuriContent = db.YuriContents.Find(id);
             if (yuriContent == null)
             {
                 return HttpNotFound();
